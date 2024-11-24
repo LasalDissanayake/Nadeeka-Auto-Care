@@ -31,11 +31,11 @@ import DeletePayment from './assets/pages/Payment/DeletePayment';
 import EditPayment from './assets/pages/Payment/EditPayment';
 import ReportPayment from './assets/pages/Payment/ReportPayment';
 
-import CreateInvoice from './assets/pages/PaymentInvoice/CreateInvoice';
-import ReadOneInvoice from './assets/pages/PaymentInvoice/ReadOneInvoice';
-import ShowInvoice from './assets/pages/PaymentInvoice/ShowInvoice';
-import EditInvoice from './assets/pages/PaymentInvoice/EditInvoice';
-import DeleteInvoice from './assets/pages/PaymentInvoice/DeleteInvoice';
+// import CreateInvoice from './assets/pages/PaymentInvoice/CreateInvoice';
+// import ReadOneInvoice from './assets/pages/PaymentInvoice/ReadOneInvoice';
+// import ShowInvoice from './assets/pages/PaymentInvoice/ShowInvoice';
+// import EditInvoice from './assets/pages/PaymentInvoice/EditInvoice';
+// import DeleteInvoice from './assets/pages/PaymentInvoice/DeleteInvoice';
 //import ReportInvoice from './assets/pages/PaymentInvoice/ReportInvoice';
 
 
@@ -128,7 +128,7 @@ import PackageDashboard from './assets/pages/SPackage/PackageDashboard';
 import ManagerLogin from './assets/components/ManagerLogin';
 import Header from './assets/components/Header';
 
-import { InvoiceDocument } from './assets/pages/PaymentInvoice/InvoiceDocument';
+// import { InvoiceDocument } from './assets/pages/PaymentInvoice/InvoiceDocument';
 
 const App = () => {
   return (
@@ -287,13 +287,7 @@ const App = () => {
       <Route path='/payments/delete/:id' element={<DeletePayment />}></Route>
       <Route path='/payments/report' element={<ReportPayment />}></Route>
       
-      <Route path='/PaymentInvoice/show' element={<ShowInvoice/>}></Route>
-      <Route path='/PaymentInvoice/create' element={<CreateInvoice/>}></Route>
-      <Route path='/PaymentInvoice/edit/:id' element={<EditInvoice/>}></Route>
-      <Route path='/PaymentInvoice/delete/:id' element={<DeleteInvoice/>}></Route>
-      {/* <Route path='/PaymentInvoice/delete/:id' element={<ReportInvoice/>}></Route> */}
-      <Route path='/PaymentInvoice/read/:id' element={<ReadOneInvoice/>}></Route> 
-      <Route path='/PaymentInvoice/InvoiceDocument' element={<InvoiceDocument/>}></Route>
+    
 
 
       <Route path ='/show-all'  element={<ShowAllBooking/>}/>
