@@ -1,0 +1,92 @@
+Test Scenarios: Create Inventory Function
+
++ Create Inventory Item with Valid Data (Valid data walta create wenwada blanwa)
++ Create inventory item with invalid Data
++ Create inventory item with missing data
++ create inventory item with empty data
+------------------------------------------------------------------------------------------------
+Test Case ID: TC001
+Test Case Description: Create a new inventory item with valid data.
+Pre-Conditions:
+	Backend must be running.
+	Database must be connected.
+	No inventory item with the same Name exists.
+Test Steps:
+	select POST Method
+	choose URL to http://localhost 8075/inventory
+	Add data with correct fields
+	Verify the response status is 201 Created.
+	Check that the response contains the created inventory item's details.
+Expected Result:
+	Status: 201 Created.
+	The response contains all the provided details of the new inventory item.
+	The item is saved in the database with the correct details.
+Actual Result:
+	Status: 201 Created.
+	The response contains all the provided details of the new inventory item.
+	The item is saved in the database with the correct details.
+Status:
+	Pass.
+
+---------------------------------------------------------------------------------------------------
+
+Test Case ID: TC002
+Test Case Description: Create inventory item with missing data
+Pre-Conditions:
+	Backend API must be running.
+	Database must be connected.
+Test Steps:
+	select POST Method
+	choose URL to http://localhost 8075/inventory
+	Add data with missing fields
+	Verify the response status is 400 Bad Request.
+	Check that the error message specifies the missing fields.
+Expected Result:
+	Status: 400 Bad Request.
+	The response contains a message: "Please provide all required fields.
+Actual Result: Status: 
+	400 Bad Request.
+	The response contains a message: "Please provide all required fields.
+Status:
+	 Pass
+-----------------------------------------------------------------------------------------------------
+
+Test Case ID: TC003
+Test Case Description: Create inventory item with invalid Data
+Pre-Conditions:
+	Backend API must be running.
+	Database must be connected.
+	Ensure no inventory item with invalid details exists in the database prior to the 	test.
+Test Steps:
+	select POST Method
+	choose URL to http://localhost 8075/inventory
+	Add data with invalid data
+	Verify the response status is 400 Bad Request.
+	Check the response body for error messages, indicating validation failures for each 	invalid field.
+Expected Result:
+	Status: 400 Bad Request
+Actual Result:
+	Status: 400 Bad Request
+Status:
+	Pass
+
+---------------------------------------------------------------------------------------------------------
+
+Test Case ID: TC008
+Test Case Description: create inventory item with empty data
+Pre-Conditions:
+	Backend API must be running.
+	Database must be connected.
+	Ensure no inventory item exists with blank or null data before the test.
+Test Steps:
+	select POST Method
+	choose URL to http://localhost 8075/inventory
+	Submit with Empty Fields
+Expected Result:
+	Status: 400 Bad Request
+	
+Actual Result:
+ 	Status: 400 Bad Request
+Status:
+	Pass
+
