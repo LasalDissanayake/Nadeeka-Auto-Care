@@ -197,6 +197,7 @@ const CreateInventory = () => {
           <label style={styles.label}>Name</label>
           <input
             type="text"
+            name='nameField'
             value={name}
             onChange={(e) => setName(e.target.value)}
             style={styles.input}

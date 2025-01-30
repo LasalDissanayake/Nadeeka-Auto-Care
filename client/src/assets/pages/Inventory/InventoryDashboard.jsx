@@ -265,7 +265,8 @@ useEffect(() => {
                                         <img src={logo} alt="Nadeeka Auto Logo" style={styles.logo} />
                                         <button
                                             onClick={() => { window.location.href = '/inventory/create' }}
-                                            style={styles.navButton}>
+                                            style={styles.navButton}
+                                            name='createInventoryButton'>
                                             Add New Items
                                         </button>
                                         <div
